@@ -1,10 +1,13 @@
 import {Component} from '@angular/core';
+import {NgClass} from "@angular/common";
 
 
 @Component({
   selector: 'app-header',
   standalone: true,
   imports: [
+    NgClass
+
 
   ],
   templateUrl: './header.component.html',
@@ -22,6 +25,6 @@ export class HeaderComponent {
 
 
   ]
-  isAdmin: boolean = true;
+  isAdmin: boolean = false;
 
 }

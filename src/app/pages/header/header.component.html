@@ -2,10 +2,9 @@
   @for (item of link; track $index) {
 
     @if (item.role === 'all' || item.role === 'admin' && isAdmin ){
-      <a [href]="item.url">
-        {{ item.nom }}
-      </a>
+      <a [href]="item.url"  [ngClass]="{'red': !isAdmin, 'green': isAdmin}" >{{ item.nom }}</a>
     }
+
 
 
   }
