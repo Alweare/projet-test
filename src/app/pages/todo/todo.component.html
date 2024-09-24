@@ -1,0 +1,38 @@
+<script src="todo.component.ts"></script><h1>TodoList</h1>
+
+
+<h2>Fait</h2>
+
+
+@for (task of tasks; track $index) {
+
+  @if (task.done) {
+    <input type="checkbox" (change)="isDone(task)" [checked]="task.done"><label>{{ task.task }}</label>
+    <button (click)="removeTask(task)">X</button>
+
+  }
+
+}
+
+<h2>A faire</h2>
+
+@for (task of tasks; track $index) {
+
+  @if (!task.done) {
+    <input type="checkbox" (change)="isDone(task)" value="test"><label>{{ task.task }}</label>
+    <button (click)="removeTask(task)">X</button>
+
+
+  }
+
+}
+
+<!--<input type="text" [(ngModel)]="taskToAdd">-->
+<!--<button>gogogo</button>-->
+
+<form (ngSubmit)="newTask()">
+
+  <label for="task">Tâche</label><input type="text" name="task" id="task" [(ngModel)]="taskToAdd" required>
+
+
+</form>

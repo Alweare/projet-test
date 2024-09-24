@@ -1,0 +1,13 @@
+
+  @for (item of link; track $index) {
+
+    @if (item.role === 'all' || item.role === 'admin' && isAdmin ){
+      <a [href]="item.url">
+        {{ item.nom }}
+      </a>
+    }
+
+
+  }
+
+
