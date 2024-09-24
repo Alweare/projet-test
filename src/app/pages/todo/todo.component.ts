@@ -43,7 +43,7 @@ export class TodoComponent {
   newTask(): void {
     let task = new Task()
     task.id = this.tasks.length + 1
-    task.task = this.taskToAdd
+    task.task = this.taskToAdd.trim()
     task.done = false;
     task.checked = false;
 
