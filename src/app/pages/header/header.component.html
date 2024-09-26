@@ -1,12 +1,17 @@
+<nav class="flex justify-between items-center bg-gray-800 p-4 text-white">
+  <a routerLink="/home"
+     [ngClass]="{'text-red-500': !isAdmin, 'text-green-500': isAdmin}"
+     class="hover:text-blue-400 px-4">Home</a>
 
-  @for (item of link; track $index) {
+  <a routerLink="/todo-list"
+     [ngClass]="{'text-red-500': !isAdmin, 'text-green-500': isAdmin}"
+     class="hover:text-blue-400 px-4">Todo</a>
 
-    @if (item.role === 'all' || item.role === 'admin' && isAdmin ){
-      <a [href]="item.url"  [ngClass]="{'red': !isAdmin, 'green': isAdmin}" >{{ item.nom }}</a>
-    }
+  <a routerLink="/generation"
+     [ngClass]="{'text-red-500': !isAdmin, 'text-green-500': isAdmin}"
+     class="hover:text-blue-400 px-4">Generation</a>
 
-
-
-  }
-
-
+  <a routerLink="/pokemon"
+     [ngClass]="{'text-red-500': !isAdmin, 'text-green-500': isAdmin}"
+     class="hover:text-blue-400 px-4">Pokemon</a>
+</nav>

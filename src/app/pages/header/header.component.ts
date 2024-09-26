@@ -1,12 +1,14 @@
 import {Component} from '@angular/core';
 import {NgClass} from "@angular/common";
+import {RouterLink} from "@angular/router";
 
 
 @Component({
   selector: 'app-header',
   standalone: true,
   imports: [
-    NgClass
+    NgClass,
+    RouterLink
 
 
   ],
@@ -17,13 +19,10 @@ export class HeaderComponent {
 
   // @ts-ignore
   link= [
-    {nom: 'Acceuil', url: 'google.fr', role: 'all'} ,
-    {nom: 'Profil', url: 'google.fr', role: 'all'} ,
-    {nom: 'Recette', url: 'google.fr', role: 'all'} ,
-    {nom: 'A propos', url: 'google.fr', role: 'all'} ,
-    {nom: 'Admin', url: 'google.fr', role: 'admin'} ,
-
-
+    'Home',
+    'Todo',
+    'Generation',
+    'Pokemon'
   ]
   isAdmin: boolean = false;
 

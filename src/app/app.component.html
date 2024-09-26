@@ -1,24 +1,24 @@
-<h1>{{ title }}</h1>
+<!--<h1>{{ title }}</h1>-->
 
 
-@if (isAdmin) {
-  <p>Cool t'es Admin</p>
-}
-<ul>
-  @for (item of courseList; track $index) {
-    <li>{{ item }}</li>
+<!--@if (isAdmin) {-->
+<!--  <p>Cool t'es Admin</p>-->
+<!--}-->
+<!--<ul>-->
+<!--  @for (item of courseList; track $index) {-->
+<!--    <li>{{ item }}</li>-->
 
-  }
-</ul>
+<!--  }-->
+<!--</ul>-->
 
-<!--Attribut []-->
-<img [src]="pathImage">
-<button (click)="addOne()">Plus 1</button>
-<p>{{count}}</p>
+<!--&lt;!&ndash;Attribut []&ndash;&gt;-->
+<!--<img [src]="pathImage">-->
+<!--<button (click)="addOne()">Plus 1</button>-->
+<!--<p>{{count}}</p>-->
 
-<app-header></app-header>
-<app-todo></app-todo>
+<!--<app-header></app-header>-->
+<router-outlet></router-outlet>
 
-<h3>Service</h3>
-<!--<p>{{ tasks | json}}</p>-->
-<p>{{product | json}}</p>
+<!--<h3>Service</h3>-->
+<!--&lt;!&ndash;<p>{{ tasks | json}}</p>&ndash;&gt;-->
+<!--<p>{{product | json}}</p>-->
